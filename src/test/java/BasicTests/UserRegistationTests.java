@@ -17,9 +17,9 @@ public class UserRegistationTests {
         String registerUserPath = "/register";
 
         String userRegistrationPayload = "{\n" +
-                "  \"firstName\": \"Siba\",\n" +
+                "  \"firstName\": \"Sibah\",\n" +
                 "  \"lastName\": \"Testing\",\n" +
-                "  \"email\": \"Group01Test@test.com\",\n" +
+                "  \"email\": \"Group01Test@test2.com\",\n" +
                 "  \"password\": \"1234567!\",\n" +
                 "  \"confirmPassword\": \"1234567!\",\n" +
         "  \"groupId\": \"c1ce77c4-bd1a-42ae-901f-fc3e534c55b8\"\n" +
@@ -68,6 +68,8 @@ public class UserRegistationTests {
 
         adminToken = response.jsonPath().getString("data.token");
         // Code for admin login test
+        System.out.println(("Response Body: " + response.getBody().asString()));
+
     }
 
     @Test(priority = 3)
